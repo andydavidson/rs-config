@@ -109,7 +109,7 @@ while (<$CONFIG>)
     if ( -f "ovr-$asn" )
     {
       warn "Prefix override file found - parsing ipv6" if $options{ d};
-      open (my $OVERRIDE, "ov4-$asn");
+      open (my $OVERRIDE, "ovr-$asn");
       while(<$OVERRIDE>)
       {
         next if /^#/;
